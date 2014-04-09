@@ -1,5 +1,5 @@
 <iframe width="1300" height="260" style="border: 1px solid #cccccc;" 
-src="http://api.thingspeak.com/channels/10792/charts/1?
+src="http://api.thingspeak.com/channels/11468/charts/1?
 title=Electrical Installation - Panel 015/24hr profile&
 xaxis=DateTime&
 yaxis=1phase Watts&
@@ -8,7 +8,7 @@ bgcolor=&
 type=line&
 width=1300&
 height=260&
-dynamic=false&
+dynamic=true&
 step=true&
 export=true&
 results=4500&
