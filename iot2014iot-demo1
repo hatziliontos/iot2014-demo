@@ -31,7 +31,7 @@ if ((mera1==29)&&(mhnas1==02)) {
     mera1=29; mhnas2=03; mera2=01;
   }
 }
-document.getElementById("frame1").src="http://api.thingspeak.com/channels/10792/charts/1?"+
+document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/charts/1?"+
   "title=Electrical Installation - Panel 015/24hr profile per hour - "+mera1+"/"+mhnas1+"/"+etos1+"&"+
   "xaxis=DateTime&"+
   "yaxis=1phase Watts&"+
