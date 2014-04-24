@@ -14,9 +14,11 @@ body {
 <body onload="autodate()">
 <script language='JavaScript' type='text/JavaScript'>
 function autodate() {
-   var date_=new Date();
-  //document.form1.mera.value;
-  alert(date_);
+   var daten=new Date();
+  document.form1.etos.value=daten.getFullYear();
+  document.form1.mhnas.value=daten.getMonth();
+  document.form1.mera.value=daten.getDate();
+  //alert(date_);
 }
 </script>
 
