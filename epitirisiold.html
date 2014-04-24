@@ -44,7 +44,7 @@ if ((mera1==29)&&(mhnas1==02)) {
   }
 }
 document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/charts/1?"+
-  "title=Electrical Installation - Panel 015/24hr profile per hour - "+mera1+"/"+mhnas1+"/"+etos1+"&"+
+  "title="+mera1+"/"+mhnas1+"/"+etos1+"&"+
   "xaxis=DateTime&"+
   "yaxis=1phase Watts&"+
   "color=red&"+
@@ -55,12 +55,12 @@ document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/
   "dynamic=false&"+
   "step=true&"+
 //  "export=true&"+
-  "results=4500&"+
+  "results=4320&"+
   "start="+etos1+"-"+mhnas1+"-"+mera1+"%2000:00:00&"+
   "end="  +etos1+"-"+mhnas1+"-"+mera1+"%2023:59:59&"+
   "average=60&";
   document.getElementById("frame2").src="http://api.thingspeak.com/channels/11468/charts/1?"+
-  "title=Electrical Installation - Panel 015/24hr profile per hour - "+mera2+"/"+mhnas2+"/"+etos2+"&"+
+  "title="+mera2+"/"+mhnas2+"/"+etos2+"&"+
   "xaxis=DateTime&"+
   "yaxis=1phase Watts&"+
   "color=red&"+
@@ -71,7 +71,7 @@ document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/
   "dynamic=false&"+
   "step=true&"+
 //  "export=true&"+
-  "results=4500&"+
+  "results=4320&"+
   "start="+etos2+"-"+mhnas2+"-"+mera2+"%2000:00:00&"+
   "end="  +etos2+"-"+mhnas2+"-"+mera2+"%2023:59:59&"+
   "average=60&";
