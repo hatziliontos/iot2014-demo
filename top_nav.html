@@ -14,8 +14,23 @@ body {
 <body onload="load()">
 <script language='JavaScript' type='text/JavaScript'>
 function load() {
+  var alltext="";
+  readTextFile("http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log",alltext);
   var x = document.getElementById("myLabel").htmlFor;
-  document.getElementById("lanip").innerHTML = "hehe";
+  document.getElementById("lanip").innerHTML = alltext;
+}
+function readTextFile(file, alltext) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function ()     {
+        if(rawFile.readyState === 4)         {
+            if(rawFile.status === 200 || rawFile.status == 0)             {
+                allText = rawFile.responseText;
+                //alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
 }
 </script>
 <h4>Συνεχής Ενεργειακή Επιτήρηση Ορεστιάδας</h4>
