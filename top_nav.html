@@ -6,10 +6,12 @@ function load() {
   $.ajax({
     url : './getFile.php',
     data : { filename : 'http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log'},
-    success : function (r) { console.log(r) //your data }
+    success : function (r) {
+      alert(r);
+      console.log(r) //your data
+    }
   });
   //readTextFile("http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log",alltext);
-  alert(allText);
 //  var x = document.getElementById("myLabel").htmlFor;
 //  document.getElementById("lanip").innerHTML = alltext;
 }
