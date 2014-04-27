@@ -12,7 +12,8 @@ body {
 </style>
 <script>
 function load() {
-  document.title="LAN IP=";
+  var x = document.getElementById("myLabel").htmlFor;
+  document.getElementById("lanip").innerHTML = "hehe";
 }
 </script>
 </head>
@@ -25,6 +26,7 @@ function load() {
    <a href="http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/about.html" target="content">Σχετικά</a> | 
    <a href="http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/help.html" target="content">Βοήθεια</a> | 
    <a href="http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/newsletter.html" target="menu">Ανακοινώσεις</a> | 
+   <label id="lanip" >LAN IP</label>
 </p>
 </body>
 </html>
