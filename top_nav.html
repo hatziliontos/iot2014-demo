@@ -7,7 +7,7 @@
 <script language='JavaScript' type='text/JavaScript'>
 function load() {
 //    data : { filename : 'http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log'},
-  function handleFile(data) {  jQuery('lanip').html(data);}
+  function handleFile(data) {  document.getElementById("lanip").innerHTML="LANIP:"+data;}
   jQuery.get('http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log',handleFile,'text');
 }
 </script>
@@ -32,7 +32,7 @@ body {
    <a href="http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/newsletter.html" target="menu">Ανακοινώσεις</a> | 
 </p>
 <p>
-   <label id="lanip" >kolos</label>
+   <label id="lanip" >LANIP:</label>
 </p>   
 </body>
 </html>
