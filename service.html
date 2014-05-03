@@ -9,8 +9,8 @@ function load() {
   document.getElementById("ddclient_cache").href=url_+'/ddclient.cache';
   document.getElementById("nmap").href=url_+'/Backup/nmap.xml';
   document.getElementById("ifconfig").href=url_+'/Backup/ifconfig.log';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
+  document.getElementById("profile_exec").href=url_+'/profile_exec.sh';
+  document.getElementById("dirall").href=url_+'/Backup/dirall.log';
   document.getElementById("").href=url_+'';
   document.getElementById("").href=url_+'';
   document.getElementById("").href=url_+'';
@@ -45,8 +45,8 @@ body {
 <p><a href="" target="content" id="nmap"          >NMAP</a>|<a                           href="http://iot2014iot.no-ip.org:22223/test.js?query=nmap" target="content">..</a></p>
 <p><a href="" target="content" id="ifconfig"      >IFCONIG</a>|<a                    href="http://iot2014iot.no-ip.org:22223/test.js?query=ifconfig" target="content">..</a></p>
 <h4>Μικροϋπολογιστής</h4>
-<p><a href="http://iot2014iot.no-ip.org:22223/profile_exec.sh"           target="content">Refresh profile</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/dirall.log"         target="content">Dir all</a>|<a                      href="http://iot2014iot.no-ip.org:22223/test.js?query=dirall" target="content">..</a></p>
+<p><a href="" target="content" id="profile_exec"  >Refresh profile</a></p>
+<p><a href="" target="content" id="dirall"        >Dir all</a>|<a                      href="http://iot2014iot.no-ip.org:22223/test.js?query=dirall" target="content">..</a></p>
 <p><a href="http://iot2014iot.no-ip.org:22223/Backup/dmesg.log"          target="content">DMESG</a>|<a                         href="http://iot2014iot.no-ip.org:22223/test.js?query=dmesg" target="content">..</a></p>
 <p><a href="http://iot2014iot.no-ip.org:22223/Backup/journalctl.log"     target="content">JOURNALCTL</a>|<a               href="http://iot2014iot.no-ip.org:22223/test.js?query=journalctl" target="content">..</a></p>
 <p><a href="http://iot2014iot.no-ip.org:22223/Backup/usb-devices.log"    target="content">USB devices</a>|<a             href="http://iot2014iot.no-ip.org:22223/test.js?query=usb-devices" target="content">..</a></p>
