@@ -7,8 +7,8 @@
 <script language='JavaScript' type='text/JavaScript'>
 function load() {
 //    data : { filename : 'http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log'},
-  function handleFile(data) {  document.getElementById("lanip").innerHTML="LANIP:"+data;}
-  jQuery.get('http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log',handleFile,'text');
+  jQuery.get('http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log',function (data) {document.getElementById("lanip").innerHTML="LANIP:"+data;},'text');
+  jQuery.get('http://iot2014iot.no-ip.org:22223/Backup/wget_dyndns_IP.log',function (data) {document.getElementById("wanip").innerHTML="WANIP:"+data;},'text');
 }
 </script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
@@ -33,6 +33,7 @@ body {
 </p>
 <p>
    <label id="lanip" >LANIP:</label>
+   <label id="wanip" >WANIP:</label>
 </p>   
 </body>
 </html>
