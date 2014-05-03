@@ -5,16 +5,16 @@
 function load() {
   url_='http://iot2014iot.no-ip.org:22223';
   document.getElementById("wget_dyndns_IP").href=url_+'/Backup/wget_dyndns_IP.log';
-  document.getElementById("lan_ip").href=url_+'/Backup/lan_ip.log';
+  document.getElementById("lan_ip"        ).href=url_+'/Backup/lan_ip.log';
   document.getElementById("ddclient_cache").href=url_+'/ddclient.cache';
-  document.getElementById("nmap").href=url_+'/Backup/nmap.xml';
-  document.getElementById("ifconfig").href=url_+'/Backup/ifconfig.log';
-  document.getElementById("profile_exec").href=url_+'/profile_exec.sh';
-  document.getElementById("dirall").href=url_+'/Backup/dirall.log';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
+  document.getElementById("nmap"          ).href=url_+'/Backup/nmap.xml';
+  document.getElementById("ifconfig"      ).href=url_+'/Backup/ifconfig.log';
+  document.getElementById("profile_exec"  ).href=url_+'/profile_exec.sh';
+  document.getElementById("dirall"        ).href=url_+'/Backup/dirall.log';
+  document.getElementById("dmesg"         ).href=url_+'/Backup/dmesg.log';
+  document.getElementById("journalctl"    ).href=url_+'/Backup/journalctl.log';
+  document.getElementById("usb-devices"   ).href=url_+'/Backup/usb-devices.log';
+  document.getElementById("df"            ).href=url_+'/Backup/df.log';
   document.getElementById("").href=url_+'';
   document.getElementById("").href=url_+'';
   document.getElementById("").href=url_+'';
@@ -39,18 +39,18 @@ body {
 <body onload="load()">
 <h3>Service</h3>
 <h4>Δίκτυο</h4>
-<p><a href="" target="content" id="wget_dyndns_IP">WAN IP</a></p>
-<p><a href="" target="content" id="lan_ip"        >LAN IP</a></p>
-<p><a href="" target="content" id="ddclient_cache">DDCLIENT</a></p>
-<p><a href="" target="content" id="nmap"          >NMAP</a>|<a                           href="http://iot2014iot.no-ip.org:22223/test.js?query=nmap" target="content">..</a></p>
-<p><a href="" target="content" id="ifconfig"      >IFCONIG</a>|<a                    href="http://iot2014iot.no-ip.org:22223/test.js?query=ifconfig" target="content">..</a></p>
+<p><a href="" target="content" id="wget_dyndns_IP">WAN IP         </a></p>
+<p><a href="" target="content" id="lan_ip"        >LAN IP         </a></p>
+<p><a href="" target="content" id="ddclient_cache">DDCLIENT       </a></p>
+<p><a href="" target="content" id="nmap"          >NMAP           </a>|<a                           href="http://iot2014iot.no-ip.org:22223/test.js?query=nmap" target="content">..</a></p>
+<p><a href="" target="content" id="ifconfig"      >IFCONIG        </a>|<a                    href="http://iot2014iot.no-ip.org:22223/test.js?query=ifconfig" target="content">..</a></p>
 <h4>Μικροϋπολογιστής</h4>
 <p><a href="" target="content" id="profile_exec"  >Refresh profile</a></p>
-<p><a href="" target="content" id="dirall"        >Dir all</a>|<a                      href="http://iot2014iot.no-ip.org:22223/test.js?query=dirall" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/dmesg.log"          target="content">DMESG</a>|<a                         href="http://iot2014iot.no-ip.org:22223/test.js?query=dmesg" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/journalctl.log"     target="content">JOURNALCTL</a>|<a               href="http://iot2014iot.no-ip.org:22223/test.js?query=journalctl" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/usb-devices.log"    target="content">USB devices</a>|<a             href="http://iot2014iot.no-ip.org:22223/test.js?query=usb-devices" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/df.log"             target="content">File system stats</a>|<a                href="http://iot2014iot.no-ip.org:22223/test.js?query=df" target="content">..</a></p>
+<p><a href="" target="content" id="dirall"        >Dir all        </a>|<a                      href="http://iot2014iot.no-ip.org:22223/test.js?query=dirall" target="content">..</a></p>
+<p><a href="" target="content" id="dmesg"         >DMESG          </a>|<a                         href="http://iot2014iot.no-ip.org:22223/test.js?query=dmesg" target="content">..</a></p>
+<p><a href="" target="content" id="journalctl"    >JOURNALCTL     </a>|<a               href="http://iot2014iot.no-ip.org:22223/test.js?query=journalctl" target="content">..</a></p>
+<p><a href="" target="content" id="usb-devices"   >USB devices    </a>|<a             href="http://iot2014iot.no-ip.org:22223/test.js?query=usb-devices" target="content">..</a></p>
+<p><a href="" target="content" id="df"            >FS stats       </a>|<a                href="http://iot2014iot.no-ip.org:22223/test.js?query=df" target="content">..</a></p>
 <p><a href="http://iot2014iot.no-ip.org:22223/Backup/psaux.log"          target="content">Processes</a>|<a                     href="http://iot2014iot.no-ip.org:22223/test.js?query=psaux" target="content">..</a></p>
 <h4>File system</h4>
 <p><a href="http://iot2014iot.no-ip.org:22223/restarts.txt"              target="content">Restarts</a></p>
