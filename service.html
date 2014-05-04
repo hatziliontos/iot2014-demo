@@ -15,18 +15,19 @@ function load() {
   document.getElementById("journalctl"    ).href=url_+'/Backup/journalctl.log';
   document.getElementById("usb-devices"   ).href=url_+'/Backup/usb-devices.log';
   document.getElementById("df"            ).href=url_+'/Backup/df.log';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
-  document.getElementById("").href=url_+'';
+  document.getElementById("psaux"         ).href=url_+'/Backup/psaux.log';
+  document.getElementById("restarts"      ).href=url_+'/restarts.txt';
+  document.getElementById("bdb_sda1"      ).href=url_+'/Backup/bdb_sda1.log';
+  document.getElementById("bdb_mmcblk0p1" ).href=url_+'/Backup/bdb_mmcblk0p1.log';
+  document.getElementById("bdb_mmcblk0p2" ).href=url_+'/Backup/bdb_mmcblk0p2.log';
+  document.getElementById("bdb_mmcblk0p5" ).href=url_+'/Backup/bdb_mmcblk0p5.log';
+  document.getElementById("fsck_sda1"     ).href=url_+'/Backup/fsck_sda1.log';
+  document.getElementById("fsck_mmcblk0p1").href=url_+'/Backup/fsck_mmcblk0p1.log';
+  document.getElementById("fsck_mmcblk0p2").href=url_+'/Backup/fsck_mmcblk0p2.log';
+  document.getElementById("fsck_mmcblk0p5").href=url_+'/Backup/fsck_mmcblk0p5.log';
 }
 </script>
-<title>Συνεχής Ενεργειακή Επιτήρηση Δημοτικού</title>
+<title>Συνεχής Ενεργειακή Επιτήρηση</title>
 <style type="text/css">
 body {
    font-family:verdana,arial,sans-serif;
@@ -39,28 +40,28 @@ body {
 <body onload="load()">
 <h3>Service</h3>
 <h4>Δίκτυο</h4>
-<p><a href="" target="content" id="wget_dyndns_IP">WAN IP         </a></p>
-<p><a href="" target="content" id="lan_ip"        >LAN IP         </a></p>
-<p><a href="" target="content" id="ddclient_cache">DDCLIENT       </a></p>
-<p><a href="" target="content" id="nmap"          >NMAP           </a>|<a                           href="http://iot2014iot.no-ip.org:22223/test.js?query=nmap" target="content">..</a></p>
-<p><a href="" target="content" id="ifconfig"      >IFCONIG        </a>|<a                    href="http://iot2014iot.no-ip.org:22223/test.js?query=ifconfig" target="content">..</a></p>
+<p><a href="" target="content" id="wget_dyndns_IP">WAN IP              </a></p>
+<p><a href="" target="content" id="lan_ip"        >LAN IP              </a></p>
+<p><a href="" target="content" id="ddclient_cache">DDCLIENT            </a></p>
+<p><a href="" target="content" id="nmap"          >NMAP                </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=nmap" target="content">..</a></p>
+<p><a href="" target="content" id="ifconfig"      >IFCONIG             </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=ifconfig" target="content">..</a></p>
 <h4>Μικροϋπολογιστής</h4>
-<p><a href="" target="content" id="profile_exec"  >Refresh profile</a></p>
-<p><a href="" target="content" id="dirall"        >Dir all        </a>|<a                      href="http://iot2014iot.no-ip.org:22223/test.js?query=dirall" target="content">..</a></p>
-<p><a href="" target="content" id="dmesg"         >DMESG          </a>|<a                         href="http://iot2014iot.no-ip.org:22223/test.js?query=dmesg" target="content">..</a></p>
-<p><a href="" target="content" id="journalctl"    >JOURNALCTL     </a>|<a               href="http://iot2014iot.no-ip.org:22223/test.js?query=journalctl" target="content">..</a></p>
-<p><a href="" target="content" id="usb-devices"   >USB devices    </a>|<a             href="http://iot2014iot.no-ip.org:22223/test.js?query=usb-devices" target="content">..</a></p>
-<p><a href="" target="content" id="df"            >FS stats       </a>|<a                href="http://iot2014iot.no-ip.org:22223/test.js?query=df" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/psaux.log"          target="content">Processes</a>|<a                     href="http://iot2014iot.no-ip.org:22223/test.js?query=psaux" target="content">..</a></p>
+<p><a href="" target="content" id="profile_exec"  >Refresh profile     </a></p>
+<p><a href="" target="content" id="dirall"        >Dir all             </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=dirall" target="content">..</a></p>
+<p><a href="" target="content" id="dmesg"         >DMESG               </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=dmesg" target="content">..</a></p>
+<p><a href="" target="content" id="journalctl"    >JOURNALCTL          </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=journalctl" target="content">..</a></p>
+<p><a href="" target="content" id="usb-devices"   >USB devices         </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=usb-devices" target="content">..</a></p>
+<p><a href="" target="content" id="df"            >FS stats            </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=df" target="content">..</a></p>
+<p><a href="" target="content" id="psaux"         >Processes           </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=psaux" target="content">..</a></p>
 <h4>File system</h4>
-<p><a href="http://iot2014iot.no-ip.org:22223/restarts.txt"              target="content">Restarts</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/bdb_sda1.log"       target="content">sda1 Bad blocks</a>|<a            href="http://iot2014iot.no-ip.org:22223/test.js?query=bdb" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/bdb_mmcblk0p1.log"  target="content">mmcblk0p1 Bad blocks</a>|<a  href="http://iot2014iot.no-ip.org:22223/test.js?query=bdb" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/bdb_mmcblk0p2.log"  target="content">mmcblk0p2 Bad blocks</a>|<a  href="http://iot2014iot.no-ip.org:22223/test.js?query=bdb" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/bdb_mmcblk0p5.log"  target="content">mmcblk0p5 Bad blocks</a>|<a  href="http://iot2014iot.no-ip.org:22223/test.js?query=bdb" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/fsck_sda1.log"      target="content">sda1 FS checked</a>|<a           href="http://iot2014iot.no-ip.org:22223/test.js?query=fsck" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/fsck_mmcblk0p1.log" target="content">mmcblk0p1 FS checked</a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=fsck" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/fsck_mmcblk0p2.log" target="content">mmcblk0p2 FS checked</a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=fsck" target="content">..</a></p>
-<p><a href="http://iot2014iot.no-ip.org:22223/Backup/fsck_mmcblk0p5.log" target="content">mmcblk0p5 FS checked</a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=fsck" target="content">..</a></p>
+<p><a href="" target="content" id="restarts"      >Restarts            </a></p>
+<p><a href="" target="content" id="bdb_sda1"      >sda1 Bad blocks     </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=bdb" target="content">..</a></p>
+<p><a href="" target="content" id="bdb_mmcblk0p1" >mmcblk0p1 Bdb       </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=bdb" target="content">..</a></p>
+<p><a href="" target="content" id="bdb_mmcblk0p2" >mmcblk0p2 Bdb       </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=bdb" target="content">..</a></p>
+<p><a href="" target="content" id="bdb_mmcblk0p5" >mmcblk0p5 Bdb       </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=bdb" target="content">..</a></p>
+<p><a href="" target="content" id="fsck_sda1"     >sda1 FS checked     </a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=fsck" target="content">..</a></p>
+<p><a href="" target="content" id="fsck_mmcblk0p1">mmcblk0p1 FS checked</a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=fsck" target="content">..</a></p>
+<p><a href="" target="content" id="fsck_mmcblk0p2">mmcblk0p2 FS checked</a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=fsck" target="content">..</a></p>
+<p><a href="" target="content" id="fsck_mmcblk0p5">mmcblk0p5 FS checked</a>|<a href="http://iot2014iot.no-ip.org:22223/test.js?query=fsck" target="content">..</a></p>
 </body>
 </html>
