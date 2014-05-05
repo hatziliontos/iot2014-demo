@@ -6,9 +6,13 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script language='JavaScript' type='text/JavaScript'>
 function load() {
-//    data : { filename : 'http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log'},
-  jQuery.get('http://iot2014iot.no-ip.org:22223/Backup/lan_ip.log',function (data) {document.getElementById("lanip").innerHTML="LANIP:"+data;},'text');
-  jQuery.get('http://iot2014iot.no-ip.org:22223/Backup/wget_dyndns_IP.log',function (data) {document.getElementById("wanip").innerHTML="WANIP:"+data;},'text');
+  url_='http://iot2014iot.no-ip.org:22223';
+  jQuery.get(url_+'/Backup/lan_ip.log',        function (data) {document.getElementById("lanip").innerHTML="LANIP:"+data;},'text');
+  jQuery.get(url_+'/Backup/wget_dyndns_IP.log',function (data) {document.getElementById("wanip").innerHTML="WANIP:"+data;},'text');
+  url_='http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/';
+  document.getElementById("about").href=url_+'about.html';
+  document.getElementById("help").href=url_+'help.html';
+  document.getElementById("newsletter").href=url_+'newsletter.html';
 }
 </script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
@@ -27,9 +31,9 @@ body {
    <a href="epitirisi.html" target="menu">Ζωντανή Επιτήρηση</a> |
    <a href="local_history.html" target="menu">Επιτήρηση Αρχείου</a> | 
    <a href="service.html" target="menu">Service</a> | 
-   <a href="http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/about.html" target="content">Σχετικά</a> | 
-   <a href="http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/help.html" target="content">Βοήθεια</a> | 
-   <a href="http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/newsletter.html" target="menu">Ανακοινώσεις</a> | 
+   <a id="about"      href="about.html" target="content">Σχετικά</a> | 
+   <a id="help"       href="help.html" target="content">Βοήθεια</a> | 
+   <a id="newsletter" href="newsletter.html" target="menu">Ανακοινώσεις</a> | 
 </p>
 <p>
    <label id="lanip" >LANIP:</label> | 
