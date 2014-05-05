@@ -9,6 +9,7 @@ function load() {
   url_='http://iot2014iot.no-ip.org:22223';
   jQuery.get(url_+'/Backup/lan_ip.log',        function (data) {document.getElementById("lanip").innerHTML="LANIP:"+data;},'text');
   jQuery.get(url_+'/Backup/wget_dyndns_IP.log',function (data) {document.getElementById("wanip").innerHTML="WANIP:"+data;},'text');
+  document.getElementById("ver").innerHTML="ver:1.01";
   url_='http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/';
   document.getElementById("about").href=url_+'about.html';
   document.getElementById("help").href=url_+'help.html';
@@ -37,7 +38,8 @@ body {
 </p>
 <p>
    <label id="lanip" >LANIP:</label> | 
-   <label id="wanip" >WANIP:</label>
+   <label id="wanip" >WANIP:</label> |
+   <label id="ver"   >ver:  </label> | 
 </p>   
 </body>
 </html>
