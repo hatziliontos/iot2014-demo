@@ -1,7 +1,16 @@
 <html>
 <meta charset="ISO-8859-7">
 <head>
-
+<script language='JavaScript' type='text/JavaScript'>
+function load() {
+  url_='http://htmlpreview.github.io/?https://github.com/hatziliontos/iot2014-demo/blob/master/';
+  document.getElementById("last01hr_20sec").href=url_+'last01hr_20sec.html';
+  document.getElementById("last24hr_60min").href=url_+'last24hr_60min.html';
+  url_='http://iot2014iot.no-ip.org:22223/test.js?';
+  document.getElementById("dirtxt").href=url_+'query=dirtxt';
+  document.getElementById("logrep24h").href=url_+'query=logrep24h';
+}
+</script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
 <style type="text/css">
 body {
@@ -52,10 +61,10 @@ if (fourth2 != 0) { setTimeout('sixteenth()',second4[fourth2]); }}
 </script> </h3>
 
 <p>
-<a href="http://htmlpreview.github.io/?https://github.com/hatziliontos/DEYAK-Biologikos/blob/master/last01hr_20sec.html" target="content">Τελ. ώρα/20sec</a> | 
-<a href="http://htmlpreview.github.io/?https://github.com/hatziliontos/DEYAK-Biologikos/blob/master/last24hr_60min.html" target="content">Τελ. 24ωρο/60min</a> | 
-<a href="http://iot2014iot.no-ip.org:22223/test.js?query=dirtxt" target="content">Ημερήσια αρχεία</a> | 
-<a href="http://iot2014iot.no-ip.org:22223/test.js?query=logrep24h" target="content">Log Rep 24h</a> | 
+<a id="last01hr_20sec" href="last01hr_20sec.html" target="content">Τελ. ώρα/20sec</a> | 
+<a id="last24hr_60min" href="last24hr_60min.html" target="content">Τελ. 24ωρο/60min</a> | 
+<a id="dirtxt"         href="query=dirtxt" target="content">Ημερήσια αρχεία</a> | 
+<a id="logrep24h"      href="query=logrep24h" target="content">Log Rep 24h</a> | 
 </p>
 Copyright &copy; <a href="http://www.iot.com.gr">Internet Of Things, Inc.</a> 2014-20xx. All rights reserved.
 </body>
