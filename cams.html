@@ -4,7 +4,8 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script language='JavaScript' type='text/JavaScript'>
 function load() {
-  $('.mez5').attr('src', function(i, old) { return old.replace(/\?.+/,"?i=" + (Math.random()*1000)); });
+  d = new Date();
+  $(".mez5").attr("src", "next_url=tempsnapshot.jpg&count="+d.getTime());
   setTimeout(load, 1000);
 }
 </script>
