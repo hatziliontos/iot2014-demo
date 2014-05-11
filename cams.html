@@ -3,6 +3,8 @@
 <head>
 <script language='JavaScript' type='text/JavaScript'>
 function load() {
+  $('.mez5').attr('src', function(i, old) { return old.replace(/\?.+/,"?i=" + (Math.random()*1000)); });
+  setTimeout(load, 1000);
 }
 </script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
@@ -20,6 +22,6 @@ a {
 </style>
 </head>
 <body onload="load()">
-  <img src="http://mez5.no-ip.org:10178/snapshot.cgi?user=admin&pwd=123456&next_url=tempsnapshot.jpg">
+  <img id="mez5" src="http://mez5.no-ip.org:10178/snapshot.cgi?user=admin&pwd=123456&next_url=tempsnapshot.jpg">
 </body>
 </html>
