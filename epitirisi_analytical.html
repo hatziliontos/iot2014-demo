@@ -43,12 +43,11 @@ document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/
   Chart’s y-axis label: <input type=text name="yaxis" value="Name"> 
   Line color: <input type="color" name="linecolor"> Background color: <input type="color" name="bgcolor"><br>
   Type:    <select name="type"><option value="spline">spline</option><option value="line">line</option>
-  <option value="bar">bar</option><option value="column">column</option>
-  Dynamic: <select name="dynamic"><option value="true">true</option><option value="false">false</option>
-  Step:    <select name="step"   ><option value="true">true</option><option value="false">false</option>
-  Export:  <select name="export" ><option value="true">true</option><option value="false">false</option>
+  <option value="bar">bar</option><option value="column">column</option></select>
+  Dynamic: <select name="dynamic"><option value="true">true</option><option value="false">false</option></select>
+  Step:    <select name="step"   ><option value="true">true</option><option value="false">false</option></select>
+  Export:  <select name="export" ><option value="true">true</option><option value="false">false</option></select>
 
-</select>
   Start date: <input type="datetime-local" name="start"> End date: <input type="datetime-local" name="end"><br>
   <a href="javascript:graph()">Graph</a>
 </form>
