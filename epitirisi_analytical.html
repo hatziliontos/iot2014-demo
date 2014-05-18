@@ -18,6 +18,8 @@ function autodate() {
 </script>
 <script language='JavaScript' type='text/JavaScript'>
 function graph(){
+document.getElementById("frame1").width=document.form1.width.value;
+document.getElementById("frame1").height=document.form1.height.value;
 document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/charts/1?"+
   "title="  +document.form1.title.value+"&"+
   "xaxis="  +document.form1.xaxis.value+"&"+
