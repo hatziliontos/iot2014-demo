@@ -19,27 +19,27 @@ function autodate() {
 <script language='JavaScript' type='text/JavaScript'>
 function graph(){
 document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/charts/1?"+
-  "title=&"+
-  "xaxis=DateTime&"+
-  "yaxis=1phase Watts&"+
-  "color=red&"+
-  "bgcolor=&"+
-  "type=column&"+
-  "width=1000&"+
-  "height=230&"+
-  "dynamic=false&"+
-  "step=true&"+
-  "export=true&"+
+  "title="  +document.form1.title.value+"&"+
+  "xaxis="  +document.form1.xaxis.value+"&"+
+  "yaxis="  +document.form1.yaxis.value+"&"+
+  "color="  +document.form1.linecolor.value+"&"+
+  "bgcolor="+document.form1.linecolor.value+"&"+
+  "type="   +document.form1.type.value+"&"+
+  "width="  +document.form1.width.value+"&"+
+  "height=" +document.form1.height.value+"&"+
+  "dynamic="+document.form1.dynamic.value+"&"+
+  "step="   +document.form1.step.value+"&"+
+  "export=" +document.form1.export.value+"&"+
   "results=4320&"+
-  "start=&"+
-  "end=&"+
+//  "start=&"+
+//  "end=&"+
   "average=60&";
 }
 </script>
 </body>
 
 <form name="form1" >
-  Title: <input type=text name="title" value="#"> Chart’s x-axis label: <input type=text name="xaxis" value="Date"> 
+  Title: <input type=text name="title" value="Title"> Chart’s x-axis label: <input type=text name="xaxis" value="Date"> 
   Chart’s y-axis label: <input type=text name="yaxis" value="Name"> 
   Line color: <input type="color" name="linecolor"> Background color: <input type="color" name="bgcolor"><br>
   Type:    <select name="type"><option value="spline">spline</option><option value="line">line</option>
