@@ -42,8 +42,12 @@ document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/
   Title: <input type=text name="title" value="#"> Chart’s x-axis label: <input type=text name="xaxis" value="Date"> 
   Chart’s y-axis label: <input type=text name="yaxis" value="Name"> 
   Line color: <input type="color" name="linecolor"> Background color: <input type="color" name="bgcolor"><br>
-  Type: <select name="type"><option value="volvo">Volvo</option><option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option><option value="audi">Audi</option>
+  Type:    <select name="type"><option value="spline">spline</option><option value="line">line</option>
+  <option value="bar">bar</option><option value="column">column</option>
+  Dynamic: <select name="dynamic"><option value="true">true</option><option value="false">false</option>
+  Step:    <select name="step"   ><option value="true">true</option><option value="false">false</option>
+  Export:  <select name="export" ><option value="true">true</option><option value="false">false</option>
+
 </select>
   Start date: <input type="datetime-local" name="start"> End date: <input type="datetime-local" name="end"><br>
   <a href="javascript:graph()">Graph</a>
