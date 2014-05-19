@@ -10,7 +10,7 @@ function load() {
   document.getElementById("nmap"          ).href=url_+'/Backup/nmap.xml';           document.getElementById("nmap_"          ).href=url_+'/test.js?query=nmap';
   document.getElementById("ifconfig"      ).href=url_+'/Backup/ifconfig.log';       document.getElementById("ifconfig_"      ).href=url_+'/test.js?query=ifconfig';
   document.getElementById("profile_exec"  ).href=url_+'/test.js?query=profile_exec';
-  document.getElementById("dirall"        ).href=url_+'/Backup/dirall.log';
+  document.getElementById("dirall"        ).href=url_+'/Backup/dirall.log';         document.getElementById("dirall_"        ).href=url_+'/test.js?query=dirall';
   document.getElementById("dmesg"         ).href=url_+'/Backup/dmesg.log';
   document.getElementById("journalctl"    ).href=url_+'/Backup/journalctl.log';
   document.getElementById("usb-devices"   ).href=url_+'/Backup/usb-devices.log';
@@ -47,7 +47,7 @@ body {
 <p><a href="" target="content" id="ifconfig"      >IFCONIG             </a>|<a href="" target="content" id="ifconfig_"      >..</a></p>
 <h4>Μικροϋπολογιστής</h4>
 <p><a href="" target="content" id="profile_exec"  >Refresh profile     </a></p>
-<p><a href="" target="content" id="dirall"        >Dir all             </a>|<a href="/test.js?query=dirall" target="content">..</a></p>
+<p><a href="" target="content" id="dirall"        >Dir all             </a>|<a href="" target="content" id="dirall_"        >..</a></p>
 <p><a href="" target="content" id="dmesg"         >DMESG               </a>|<a href="/test.js?query=dmesg" target="content">..</a></p>
 <p><a href="" target="content" id="journalctl"    >JOURNALCTL          </a>|<a href="/test.js?query=journalctl" target="content">..</a></p>
 <p><a href="" target="content" id="usb-devices"   >USB devices         </a>|<a href="/test.js?query=usb-devices" target="content">..</a></p>
