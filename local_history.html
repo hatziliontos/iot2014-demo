@@ -1,6 +1,14 @@
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
+<script language='JavaScript' type='text/JavaScript'>
+function load() { 
+  url_='http://iot2014iot.no-ip.org:22223';
+  document.getElementById("dirtxt"     ).href=url_+'/test.js?query=dirtxt';
+  document.getElementById("logrep15min").href=url_+'/test.js?query=logrep15min';
+  document.getElementById("logrep24h"  ).href=url_+'/test.js?query=logrep24h';
+}
+</script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
 <style type="text/css">
 body {
@@ -11,12 +19,12 @@ body {
    }
 </style>
 </head>
-<body>
+<body onload="load()">
 <h3>Τοπικό ιστορικό</h3>
 <h4>Πίνακες</h4>
-  <p><a href="http://iot2014iot.no-ip.org:22223/test.js?query=dirtxt" target="content">Ημερήσια Αρχεία</a></p>
-  <p><a href="http://iot2014iot.no-ip.org:22223/test.js?query=logrep15min" target="content">Τελευταίο 15λεπτο</a></p>
-  <p><a href="http://iot2014iot.no-ip.org:22223/test.js?query=logrep24h" target="content">Τελευταίο 24ωρο</a></p>
+  <p><a id="dirtxt"      href="" target="content">Ημερήσια Αρχεία</a></p>
+  <p><a id="logrep15min" href="" target="content">Τελευταίο 15λεπτο</a></p>
+  <p><a id="logrep24h"   href="" target="content">Τελευταίο 24ωρο</a></p>
 <h3>Απομακρυσμένο ιστορικό</h3>
 <h4>Αναλυτικό διάγραμμα</h4>
   <p><a href="epitirisi_analytical.html" target="content">Γενικές επιλογές</a></p>
