@@ -17,11 +17,11 @@ function load() {
   document.getElementById("df"            ).href=url_+'/Backup/df.log';             document.getElementById("df_"            ).href=url_+'/test.js?query=df';
   document.getElementById("psaux"         ).href=url_+'/Backup/psaux.log';          document.getElementById("psaux_"         ).href=url_+'/test.js?query=psaux';
   document.getElementById("restarts"      ).href=url_+'/restarts.txt';
-  document.getElementById("bdb_sda1"      ).href=url_+'/Backup/bdb_sda1.log';
+  document.getElementById("bdb_sda1"      ).href=url_+'/Backup/bdb_sda1.log';       document.getElementById("bdb_sda1_"      ).href=url_+'/test.js?query=bdb';
   document.getElementById("bdb_mmcblk0p1" ).href=url_+'/Backup/bdb_mmcblk0p1.log';
   document.getElementById("bdb_mmcblk0p2" ).href=url_+'/Backup/bdb_mmcblk0p2.log';
   document.getElementById("bdb_mmcblk0p5" ).href=url_+'/Backup/bdb_mmcblk0p5.log';
-  document.getElementById("fsck_sda1"     ).href=url_+'/Backup/fsck_sda1.log';
+  document.getElementById("fsck_sda1"     ).href=url_+'/Backup/fsck_sda1.log';      document.getElementById("fsck_sda1_"     ).href=url_+'/test.js?query=fsck';
   document.getElementById("fsck_mmcblk0p1").href=url_+'/Backup/fsck_mmcblk0p1.log';
   document.getElementById("fsck_mmcblk0p2").href=url_+'/Backup/fsck_mmcblk0p2.log';
   document.getElementById("fsck_mmcblk0p5").href=url_+'/Backup/fsck_mmcblk0p5.log';
@@ -55,13 +55,13 @@ body {
 <p><a href="" target="content" id="psaux"         >Processes           </a>|<a href="" target="content" id="psaux_"         >..</a></p>
 <h4>File system</h4>
 <p><a href="" target="content" id="restarts"      >Restarts            </a></p>
-<p><a href="" target="content" id="bdb_sda1"      >sda1 Bad blocks     </a>|<a href="/test.js?query=bdb" target="content">..</a></p>
-<p><a href="" target="content" id="bdb_mmcblk0p1" >mmcblk0p1 Bdb       </a>|<a href="/test.js?query=bdb" target="content">..</a></p>
-<p><a href="" target="content" id="bdb_mmcblk0p2" >mmcblk0p2 Bdb       </a>|<a href="/test.js?query=bdb" target="content">..</a></p>
-<p><a href="" target="content" id="bdb_mmcblk0p5" >mmcblk0p5 Bdb       </a>|<a href="/test.js?query=bdb" target="content">..</a></p>
-<p><a href="" target="content" id="fsck_sda1"     >sda1 FS checked     </a>|<a href="/test.js?query=fsck" target="content">..</a></p>
-<p><a href="" target="content" id="fsck_mmcblk0p1">mmcblk0p1 FS checked</a>|<a href="/test.js?query=fsck" target="content">..</a></p>
-<p><a href="" target="content" id="fsck_mmcblk0p2">mmcblk0p2 FS checked</a>|<a href="/test.js?query=fsck" target="content">..</a></p>
-<p><a href="" target="content" id="fsck_mmcblk0p5">mmcblk0p5 FS checked</a>|<a href="/test.js?query=fsck" target="content">..</a></p>
+<p><a href="" target="content" id="bdb_sda1"      >sda1 Bad blocks     </a>|<a href="" target="content" id="bdb_sda1_"      >..</a></p>
+<p><a href="" target="content" id="bdb_mmcblk0p1" >mmcblk0p1 Bdb       </a>|</p>
+<p><a href="" target="content" id="bdb_mmcblk0p2" >mmcblk0p2 Bdb       </a>|</p>
+<p><a href="" target="content" id="bdb_mmcblk0p5" >mmcblk0p5 Bdb       </a>|</p>
+<p><a href="" target="content" id="fsck_sda1"     >sda1 FS checked     </a>|<a href="" target="content" id="fsck_sda1_"     >..</a></p>
+<p><a href="" target="content" id="fsck_mmcblk0p1">mmcblk0p1 FS checked</a>|</p>
+<p><a href="" target="content" id="fsck_mmcblk0p2">mmcblk0p2 FS checked</a>|</p>
+<p><a href="" target="content" id="fsck_mmcblk0p5">mmcblk0p5 FS checked</a>|</p>
 </body>
 </html>
