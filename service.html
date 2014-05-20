@@ -11,11 +11,11 @@ function load() {
   document.getElementById("ifconfig"      ).href=url_+'/Backup/ifconfig.log';       document.getElementById("ifconfig_"      ).href=url_+'/test.js?query=ifconfig';
   document.getElementById("profile_exec"  ).href=url_+'/test.js?query=profile_exec';
   document.getElementById("dirall"        ).href=url_+'/Backup/dirall.log';         document.getElementById("dirall_"        ).href=url_+'/test.js?query=dirall';
-  document.getElementById("dmesg"         ).href=url_+'/Backup/dmesg.log';
-  document.getElementById("journalctl"    ).href=url_+'/Backup/journalctl.log';
-  document.getElementById("usb-devices"   ).href=url_+'/Backup/usb-devices.log';
-  document.getElementById("df"            ).href=url_+'/Backup/df.log';
-  document.getElementById("psaux"         ).href=url_+'/Backup/psaux.log';
+  document.getElementById("dmesg"         ).href=url_+'/Backup/dmesg.log';          document.getElementById("dmesg_"         ).href=url_+'/test.js?query=dmesg';
+  document.getElementById("journalctl"    ).href=url_+'/Backup/journalctl.log';     document.getElementById("journalctl_"    ).href=url_+'/test.js?query=journalctl';
+  document.getElementById("usb-devices"   ).href=url_+'/Backup/usb-devices.log';    document.getElementById("usb-devices_"   ).href=url_+'/test.js?query=usb-devices';
+  document.getElementById("df"            ).href=url_+'/Backup/df.log';             document.getElementById("df_"            ).href=url_+'/test.js?query=df';
+  document.getElementById("psaux"         ).href=url_+'/Backup/psaux.log';          document.getElementById("psaux_"         ).href=url_+'/test.js?query=psaux';
   document.getElementById("restarts"      ).href=url_+'/restarts.txt';
   document.getElementById("bdb_sda1"      ).href=url_+'/Backup/bdb_sda1.log';
   document.getElementById("bdb_mmcblk0p1" ).href=url_+'/Backup/bdb_mmcblk0p1.log';
@@ -48,11 +48,11 @@ body {
 <h4>Μικροϋπολογιστής</h4>
 <p><a href="" target="content" id="profile_exec"  >Refresh profile     </a></p>
 <p><a href="" target="content" id="dirall"        >Dir all             </a>|<a href="" target="content" id="dirall_"        >..</a></p>
-<p><a href="" target="content" id="dmesg"         >DMESG               </a>|<a href="/test.js?query=dmesg" target="content">..</a></p>
-<p><a href="" target="content" id="journalctl"    >JOURNALCTL          </a>|<a href="/test.js?query=journalctl" target="content">..</a></p>
-<p><a href="" target="content" id="usb-devices"   >USB devices         </a>|<a href="/test.js?query=usb-devices" target="content">..</a></p>
-<p><a href="" target="content" id="df"            >FS stats            </a>|<a href="/test.js?query=df" target="content">..</a></p>
-<p><a href="" target="content" id="psaux"         >Processes           </a>|<a href="/test.js?query=psaux" target="content">..</a></p>
+<p><a href="" target="content" id="dmesg"         >DMESG               </a>|<a href="" target="content" id="dmesg_"         >..</a></p>
+<p><a href="" target="content" id="journalctl"    >JOURNALCTL          </a>|<a href="" target="content" id="journalctl_"    >..</a></p>
+<p><a href="" target="content" id="usb-devices"   >USB devices         </a>|<a href="" target="content" id="usb-devices_"   >..</a></p>
+<p><a href="" target="content" id="df"            >FS stats            </a>|<a href="" target="content" id="df_"            >..</a></p>
+<p><a href="" target="content" id="psaux"         >Processes           </a>|<a href="" target="content" id="psaux_"         >..</a></p>
 <h4>File system</h4>
 <p><a href="" target="content" id="restarts"      >Restarts            </a></p>
 <p><a href="" target="content" id="bdb_sda1"      >sda1 Bad blocks     </a>|<a href="/test.js?query=bdb" target="content">..</a></p>
