@@ -14,9 +14,9 @@ body {
 <body>
 <script language='JavaScript' type='text/JavaScript'>
 function graph(){
-document.getElementById("frame1").width=document.form1.width.value;
-document.getElementById("frame1").height=document.form1.height.value;
-document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/charts/1?"+
+  document.getElementById("frame1").width=document.form1.width.value;
+  document.getElementById("frame1").height=document.form1.height.value;
+  document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/charts/1?"+
   "title="  +document.form1.title.value+"&"+
   "xaxis="  +document.form1.xaxis.value+"&"+
   "yaxis="  +document.form1.yaxis.value+"&"+
@@ -47,7 +47,7 @@ document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/
   Export:  <select name="export_" ><option value="true">true</option><option value="false">false</option></select>
   Width: <input type=text name="width" value="1000"> Height: <input type=text name="height" value="400"><br>
   Start date: <input type="datetime-local" name="start"> End date: <input type="datetime-local" name="end"><br>
-  <a href="javascript:graph()">Graph</a>
 </form>
+  <a href="javascript:graph()">Graph</a>
 <iframe id="frame1" width="1000" height="400" style="border: 1px solid #cccccc;" src=""></iframe>
 </html>
