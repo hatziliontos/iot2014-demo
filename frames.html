@@ -4,22 +4,27 @@
 <head>
 <script language='JavaScript' type='text/JavaScript'>
 function load() {
-  url_='http://iot2014iot.no-ip.org:22223';
-  document.getElementById("topNav").src=url_+'newsletter.html';
+  url_='http://htmlpreview.github.io/?https://github.com/hatziliontos/iot2014-demo/blob/master/';
+  document.getElementById("topNav" ).src=url_+'top_nav.html';
+  document.getElementById("menu"   ).src=url_+'epitirisi.html';
+  document.getElementById("content").src=url_+'content.html';
+  document.getElementById("footer" ).src=url_+'footer.html';
 }
 </script>
 
 <title>Συνεχής Ενεργειακή Επιτήρηση Δημοτικού Κτιρίου Ορεστιάδας</title>
 </head>
+<body onload="load()">
 <frameset rows="100,*,80" frameborder="0" border="0" framespacing="0">
-  <frame name="topNav" src="http://htmlpreview.github.io/?https://github.com/hatziliontos/iot2014-demo/blob/master/top_nav.html">
+  <frame name="topNav" src="">
 <frameset cols="200,*" frameborder="0" border="0" framespacing="0">
-   <frame name="menu" src="http://htmlpreview.github.io/?https://github.com/hatziliontos/iot2014-demo/blob/master/epitirisi.html" marginheight="0" marginwidth="0" scrolling="auto" noresize>
-   <frame name="content" src="http://htmlpreview.github.io/?https://github.com/hatziliontos/iot2014-demo/blob/master/content.html" marginheight="0" marginwidth="0" scrolling="auto" noresize>
+   <frame name="menu" src="" marginheight="0" marginwidth="0" scrolling="auto" noresize>
+   <frame name="content" src="" marginheight="0" marginwidth="0" scrolling="auto" noresize>
 </frameset>
-  <frame name="footer" src="http://htmlpreview.github.io/?https://github.com/hatziliontos/iot2014-demo/blob/master/footer.html">
+  <frame name="footer" src="">
 <noframes>
 <p>This section (everything between the 'noframes' tags) will only be displayed if the users' browser doesn't support frames. You can provide a link to a non-frames version of the website here. Feel free to use HTML tags within this section.</p>
 </noframes>
 </frameset>
+</body>
 </html>
