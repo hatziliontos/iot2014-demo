@@ -11,11 +11,7 @@ body {
    }
 </style>
 </head>
-<body onload="autodate()">
-<script language='JavaScript' type='text/JavaScript'>
-function autodate() {
-}
-</script>
+<body>
 <script language='JavaScript' type='text/JavaScript'>
 function graph(){
 document.getElementById("frame1").width=document.form1.width.value;
@@ -31,7 +27,7 @@ document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/
   "height=" +document.form1.height.value+"&"+
   "dynamic="+document.form1.dynamic.value+"&"+
   "step="   +document.form1.step.value+"&"+
-  "export=" +document.form1.export.value+"&"+
+  "export=" +document.form1.export_.value+"&"+
   "results=4320&"+
 //  "start=&"+
 //  "end=&"+
@@ -48,7 +44,7 @@ document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/
   <option value="bar">bar</option><option value="column">column</option></select>
   Dynamic: <select name="dynamic"><option value="true">true</option><option value="false">false</option></select>
   Step:    <select name="step"   ><option value="true">true</option><option value="false">false</option></select>
-  Export:  <select name="export" ><option value="true">true</option><option value="false">false</option></select>
+  Export:  <select name="export_" ><option value="true">true</option><option value="false">false</option></select>
   Width: <input type=text name="width" value="1000"> Height: <input type=text name="height" value="400"><br>
   Start date: <input type="datetime-local" name="start"> End date: <input type="datetime-local" name="end"><br>
   <a href="javascript:graph()">Graph</a>
