@@ -6,7 +6,8 @@
 function load() {
   d = new Date();
   $("#mez5"     ).attr("src", "http://mez5.no-ip.org:10178/snapshot.cgi?user=admin&pwd=123456&next_url=tempsnapshot.jpg&time="+d.getTime());
-  $("#deyakbiol").attr("src", "http://94.68.165.177:1179/snapshot.cgi?user=admin&pwd=123456&next_url=tempsnapshot.jpg&time="+d.getTime());
+  $("#deyakbiol1").attr("src", "http://94.68.165.177:1179/snapshot.cgi?user=admin&pwd=123456&next_url=tempsnapshot.jpg&time="+d.getTime());
+  $("#deyakbiol2").attr("src", "http://94.68.165.177:1178/snapshot.cgi?user=admin&pwd=123456&next_url=tempsnapshot.jpg&time="+d.getTime());
   setTimeout(load, 2000);
 }
 </script>
@@ -26,6 +27,7 @@ a {
 </head>
 <body onload="load()">
   <img id="mez5"      src="" width="420" height="420">
-  <img id="deyakbiol" src="" width="420" height="420">
+  <img id="deyakbiol1" src="" width="420" height="420">
+  <img id="deyakbiol2" src="" width="420" height="420">
 </body>
 </html>
