@@ -13,41 +13,96 @@ body {
 </head>
 <body>
 <script language='JavaScript' type='text/JavaScript'>
-function graph(){
-  document.getElementById("frame1").width=document.form1.width.value;
+function graph_(){
+  var ths="";
+  document.getElementById("frame1").width =document.form1.width.value;
   document.getElementById("frame1").height=document.form1.height.value;
-  document.getElementById("frame1").src="http://api.thingspeak.com/channels/11468/charts/1?"+
-  "title="  +document.form1.title.value+"&"+
-  "xaxis="  +document.form1.xaxis.value+"&"+
-  "yaxis="  +document.form1.yaxis.value+"&"+
-  "color="  +document.form1.linecolor.value+"&"+
-  "bgcolor="+document.form1.linecolor.value+"&"+
-  "type="   +document.form1.type.value+"&"+
-  "width="  +document.form1.width.value+"&"+
-  "height=" +document.form1.height.value+"&"+
-  "dynamic="+document.form1.dynamic.value+"&"+
-  "step="   +document.form1.step.value+"&"+
-  "export=" +document.form1.export_.value+"&"+
-  "results=4320&"+
-//  "start=&"+
-//  "end=&"+
-  "average=60&";
+  ths="http://api.thingspeak.com/channels/11468/charts/1?";
+  ths=ths+
+  "title="     +document.form1.title.value+"&"+
+  "xaxis="     +document.form1.xaxis.value+"&"+
+  "yaxis="     +document.form1.yaxis.value+"&"+
+//  "color="     +document.form1.linecolor.value+"&"+
+//  "bgcolor="   +document.form1.linecolor.value+"&"+
+  "color=red&"+
+  "bgcolor=blue&"+
+  "type="      +document.form1.type.value+"&"+
+  "width="     +document.form1.width.value+"&"+
+  "height="    +document.form1.height.value+"&"+
+//  "width=auto&"+
+//  "height=auto&"+
+  "dynamic="   +document.form1.dynamic.value+"&"+
+  "step="      +document.form1.step.value+"&"+
+  "export="    +document.form1.export_.value+"&"+
+  //"yaxismin="  +document.form1.yaxismin.value+"&"+
+  //"yaxismax="  +document.form1.yaxismax.value+"&"+
+  //"key="       +document.form1.key.value+"&"+
+  "results="   +document.form1.results.value+"&";
+  //"days="      +document.form1.days.value+"&"+
+  if (document.form1.start.value!="") {
+    ths=ths+"start="     +document.form1.start.value+"&";
+  }
+  if (document.form1.end.value!="") {
+    ths=ths+"end="       +document.form1.end.value+"&";
+  }
+  ths=ths+
+  "tz="        +document.form1.tz.value+"&"+
+  "status="    +document.form1.status_.value+"&"+
+  "location="  +document.form1.location_.value+"&";
+  if (document.form1.min_.value!="") {
+    ths=ths+"min="     +document.form1.min_.value+"&";
+  }
+  if (document.form1.max_.value!="") {
+    ths=ths+"max="       +document.form1.max_.value+"&";
+  }
+  ths=ths+
+  "round="     +document.form1.round.value+"&"+
+  "timescale=" +document.form1.timescale.value+"&"+
+  "sum="       +document.form1.sum_.value+"&"+
+  "average="   +document.form1.average_.value+"&"+
+  "median="    +document.form1.median_.value+"&";
+  document.getElementById("frame1").src=ths;
 }
 </script>
 </body>
-
 <form name="form1" >
-  Title: <input type=text name="title" value="Title"> Chart’s x-axis label: <input type=text name="xaxis" value="Date"> 
+  Title: <input type=text name="title" value="Title"> 
+  Chart’s x-axis label: <input type=text name="xaxis" value="Date"> 
   Chart’s y-axis label: <input type=text name="yaxis" value="Name"> 
-  Line color: <input type="color" name="linecolor"> Background color: <input type="color" name="bgcolor"><br>
+  Line color: <input type="color" name="linecolor" value="red"> 
+  Background color: <input type="color" name="bgcolor" value="green">
   Type:    <select name="type"><option value="spline">spline</option><option value="line">line</option>
-  <option value="bar">bar</option><option value="column">column</option></select>
+           <option value="bar">bar</option><option value="column">column</option></select>
   Dynamic: <select name="dynamic"><option value="true">true</option><option value="false">false</option></select>
   Step:    <select name="step"   ><option value="true">true</option><option value="false">false</option></select>
   Export:  <select name="export_" ><option value="true">true</option><option value="false">false</option></select>
-  Width: <input type=text name="width" value="1000"> Height: <input type=text name="height" value="400"><br>
-  Start date: <input type="datetime-local" name="start"> End date: <input type="datetime-local" name="end"><br>
+  Width: <input type=text name="width" value="1000" size=4> 
+  Height: <input type=text name="height" value="400" size=4>
+  yAxisMin: <input type=text name="yaxismin" value="" size=5> 
+  yAxisMax: <input type=text name="yaxismax" value="" size=5>
+  KEY: <input type=text name="key" value="" size=16> 
+  Results: <input type=text name="results" value="60" size=5>
+  Days: <input type=text name="days" value="" size=2>
+  Start date: <input type="date" name="start" value=""> 
+  End date: <input type="date" name="end" value="">
+  TZ: <input type=text name="tz" value="Europe/Athens" size=13>
+  Status: <select name="status_"><option value="true">true</option><option value="false">false</option></select>
+  Location: <select name="location_"><option value="true">true</option><option value="false">false</option></select>
+  Min: <input type=text name="min_" value="" size=5> Max: <input type=text name="max_" value="" size=5>
+  Round: <input type=text name="round" value="1" size=1>
+  Timescale: <select name="timescale"><option value=""></option><option value="10">10</option><option value="15">15</option>
+             <option value="20">20</option><option value="30">30</option><option value="60">60</option><option value="240">240</option>
+             <option value="720">720</option><option value="1440">1440</option><option value="daily">daily</option></select>
+  Sum: <select name="sum_"><option value=""></option><option value="10">10</option><option value="15">15</option>
+       <option value="20">20</option><option value="30">30</option><option value="60">60</option><option value="240">240</option>
+       <option value="720">720</option><option value="1440">1440</option><option value="daily">daily</option></select>
+  Average: <select name="average_"><option value=""></option><option value="10">10</option><option value="15">15</option>
+           <option value="20">20</option><option value="30">30</option><option value="60">60</option><option value="240">240</option>
+           <option value="720">720</option><option value="1440">1440</option><option value="daily">daily</option></select>
+  Median: <select name="median_"><option value=""></option><option value="10">10</option><option value="15">15</option>
+          <option value="20">20</option><option value="30">30</option><option value="60">60</option><option value="240">240</option>
+          <option value="720">720</option><option value="1440">1440</option><option value="daily">daily</option></select>
+  <a href="javascript:graph_()">Graph</a><br>
 </form>
-  <a href="javascript:graph()">Graph</a>
 <iframe id="frame1" width="1000" height="400" style="border: 1px solid #cccccc;" src=""></iframe>
 </html>
