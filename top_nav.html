@@ -17,7 +17,7 @@ function load() {
 function curval_() {
   url_='https://api.thingspeak.com/channels/11468/fields/1/last';
   jQuery.get(url_,function (data) {document.getElementById("curval").innerHTML="CurVal:"+data+"Amps";},'text');
-  setTimeout(curval_, 2000);
+  setTimeout(curval_, 20000);
 }
 </script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
