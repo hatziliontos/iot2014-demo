@@ -11,8 +11,13 @@ function load() {
   jQuery.get(url_+'/Backup/wget_dyndns_IP.log',function (data) {document.getElementById("wanip").innerHTML="WANIP:"+data;},'text');
   url_='http://htmlpreview.github.io/?https://github.com/hatziliontos/common/blob/master/';
   document.getElementById("about").href=url_+'about.html';
-  document.getElementById("help").href=url_+'help.html';
   document.getElementById("newsletter").href=url_+'newsletter.html';
+  curval_();
+}
+function curval_() {
+  url_='https://api.thingspeak.com/channels/11468/fields/1/last';
+  jQuery.get(url_,function (data) {document.getElementById("curval").innerHTML="CurVal:"+data+"Amps";},'text');
+  setTimeout(curval_, 2000);
 }
 </script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
@@ -38,6 +43,7 @@ body {
 <p>
    <label id="lanip" >LANIP:</label> | 
    <label id="wanip" >WANIP:</label> |
+   <label id="curval" >CurVal:</label> |
 </p>   
 </body>
 </html>
