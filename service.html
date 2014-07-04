@@ -16,6 +16,7 @@ function load() {
   document.getElementById("usb-devices"   ).href=url_+'/Backup/usb-devices.log';    document.getElementById("usb-devices_"   ).href=url_+'/test.js?query=usb-devices';
   document.getElementById("df"            ).href=url_+'/Backup/df.log';             document.getElementById("df_"            ).href=url_+'/test.js?query=df';
   document.getElementById("psaux"         ).href=url_+'/Backup/psaux.log';          document.getElementById("psaux_"         ).href=url_+'/test.js?query=psaux';
+                                                                                    document.getElementById("reboot_"        ).href=url_+'/test.js?query=reboot';
   document.getElementById("restarts"      ).href=url_+'/restarts.txt';
   document.getElementById("bdb_sda1"      ).href=url_+'/Backup/bdb_sda1.log';       document.getElementById("bdb_sda1_"      ).href=url_+'/test.js?query=bdb';
   document.getElementById("bdb_mmcblk0p1" ).href=url_+'/Backup/bdb_mmcblk0p1.log';
@@ -53,6 +54,7 @@ body {
 <p><a href="" target="content" id="usb-devices"   >USB devices         </a>|<a href="" target="content" id="usb-devices_"   >..</a></p>
 <p><a href="" target="content" id="df"            >FS stats            </a>|<a href="" target="content" id="df_"            >..</a></p>
 <p><a href="" target="content" id="psaux"         >Processes           </a>|<a href="" target="content" id="psaux_"         >..</a></p>
+<p><a href="" target="content"                    >                    </a>|<a href="" target="content" id="reboot_"        >REBOOT</a></p>
 <h4>File system</h4>
 <p><a href="" target="content" id="restarts"      >Restarts            </a></p>
 <p><a href="" target="content" id="bdb_sda1"      >sda1 Bad blocks     </a>|<a href="" target="content" id="bdb_sda1_"      >..</a></p>
